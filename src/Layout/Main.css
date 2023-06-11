@@ -1,0 +1,27 @@
+.weather-info__header h1,
+.weather-info__header input {
+  font-size: 1.5rem;
+}
+
+.weather-info__header h1 {
+  display: inline-block;
+  margin-right: 0.1rem;
+}
+
+.weather-info__header input {
+  width: 5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.weather-info__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-info__details img {
+  width: 6rem;
+}
