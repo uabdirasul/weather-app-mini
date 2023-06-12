@@ -41,7 +41,7 @@ function Main() {
                 />
               </div>
               <div className="weather-info__fahrenheit">
-                <h3>{weatherObj.current.temp_f}° F </h3>
+                <h3>{weatherObj.current.temp_c}° C </h3>
               </div>
             </div>
           )}
