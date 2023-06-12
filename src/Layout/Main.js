@@ -14,7 +14,7 @@ function Main() {
         `https://api.weatherapi.com/v1/current.json?key=37702912e7a84bceabe100401231106&q=${searchedWeather}`
       )
       .then((response) => setWeatherObj(response.data))
-      .catch((err) => console.log(err));
+      .catch((err) => setWeatherObj());
   }, [searchedWeather]);
 
   return (
