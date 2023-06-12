@@ -5,7 +5,7 @@ import "./Main.css";
 function Main() {
   const locationInputRef = useRef(null);
   const [weatherObj, setWeatherObj] = useState(null);
-  const [searchedWeather, setSearchedWeather] = useState("");
+  const [searchedWeather, setSearchedWeather] = useState("Nukus");
 
   useEffect(() => {
     locationInputRef.current.focus();
@@ -14,7 +14,7 @@ function Main() {
         `https://api.weatherapi.com/v1/current.json?key=37702912e7a84bceabe100401231106&q=${searchedWeather}`
       )
       .then((response) => setWeatherObj(response.data))
-      .catch((err) => setWeatherObj());
+      .catch(() => setWeatherObj());
   }, [searchedWeather]);
 
   return (
