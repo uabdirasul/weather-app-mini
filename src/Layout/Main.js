@@ -8,13 +8,13 @@ function Main() {
   const [searchedWeather, setSearchedWeather] = useState("");
 
   useEffect(() => {
-    async function fetchWeather() {
-      const response = await axios.get(
+    locationInputRef.current.focus();
+    axios
+      .get(
         `http://api.weatherapi.com/v1/current.json?key=37702912e7a84bceabe100401231106&q=${searchedWeather}`
-      );
-      setWeatherObj(response.data);
-    }
-    fetchWeather();
+      )
+      .then((response) => setWeatherObj(response.data))
+      .catch((err) => console.log(err));
   }, [searchedWeather]);
 
   return (
